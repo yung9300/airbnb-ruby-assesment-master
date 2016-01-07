@@ -1,0 +1,49 @@
+<link rel="stylesheet" type="text/css" href="/css/static.css"/>
+<title>House Life? Realty </title>
+ <div id="background-video">
+            <video autoplay="true" loop>
+                <source src="/img/Home.mp4" type="video/mp4" >
+            </video>
+        </div>
+<html>
+
+
+<head>
+</head>
+
+<body>
+	<div id='box8'>
+	<%@properties.each do |s| %>
+<table id='table2'>
+	<tr>
+    <td><h5>Location</h5></td>
+    <td><h5>Description</h5></td>
+</tr>
+	<tr>
+	<td>
+	  <h4><%= s.Location %></h4>
+      <h5>Rooms<h5>
+      <h4><%= s.Rooms %></h4>
+      <h5>Bathrooms</h5>
+      <h4><%= s.Bathrooms %></h4>
+      <h5>Parking</h5>
+      <h4><%= s.Parking %></h4>
+      <h5>Price Per Night($)</h5>
+      <h4><%= s.Price_p_n %></h4>
+      <h5>Listed at</h5>
+      <h4><%= s.created_at %></h4>
+      <h1></h1>
+  </td>
+  <td>
+  	<h4><%= s.Description %></h4>
+  </td>
+  </tr>
+</table>
+		
+
+	<% end %>
+	</div>
+
+</body>
+
+</html>

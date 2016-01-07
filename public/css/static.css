@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  background: #000; 
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+
+h1 { 
+  font-size: 7rem;
+  text-transform: capitalize;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+h3 { 
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+h5 { 
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+
+h4 { 
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+
+form { 
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1px;
+  letter-spacing: .3rem;
+}
+
+#box { 
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 3rem;
+  height:19%;
+  width: 25%;
+  margin:15%;
+  float: right;
+  border-radius: 25px
+}
+
+table {
+  height:15%;
+  width:10%;
+  color: white; 
+}
+
+#box1 { 
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 3rem;
+  height:70%;
+  width: 45%;
+  margin:5%;
+  margin-left: 2%;
+  margin-right:2%;
+  float: left;
+  border-radius: 25px
+}
+
+#box2 { 
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 3rem;
+  height:70%;
+  width: 20%;
+  margin:5%;
+  margin-left: 2%;
+  margin-right: 8%;
+  float: right;
+  border-radius: 25px
+}
+
+
+#box5 { 
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 3rem;
+  height:24%;
+  width: 25%;
+  margin:15%;
+  float: right;
+  border-radius: 25px
+}
+
+#box8 { 
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 3rem;
+  height:300%;
+  width: 60%;
+  margin:15%;
+  float: center;
+  border-radius: 25px
+}
+
+#box7 { 
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 3rem;
+  height:21%;
+  width: 25%;
+  margin:15%;
+  float: right;
+  border-radius: 25px
+}
+
+#box9 { 
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 3rem;
+  height:24%;
+  width: 25%;
+  margin:15%;
+  float: right;
+  border-radius: 25px
+}
+
+h6 {
+  font-size: 0.3rem;
+}
+
+#table2 {
+  width:70%;
+}

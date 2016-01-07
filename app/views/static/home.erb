@@ -1,0 +1,67 @@
+<link rel="stylesheet" type="text/css" href="/css/static.css"/>
+
+<title>House Life? Realty</title>
+ <div id="background-video">
+            <video autoplay="true" loop>
+                <source src="/img/Home.mp4" type="video/mp4" >
+            </video>
+        </div>
+<div id="box1">
+ <h3>House Life? Realty</h3>
+ <h3> Houses Available! </h3>
+ <table>
+  <tr>
+    <th>Location</th>
+    <th>Rooms</th>
+    <th>Bathrooms</th>
+    <th>Parking</th>
+    <th>Price($)</th>
+    <th> Listed at </th>
+  </tr>
+   <%@properties.each do |s| %>
+  <tr>
+      <td><%= s.Location %></td>
+      <td><%= s.Rooms %></td>
+      <td><%= s.Bathrooms %></td>
+      <td><%= s.Parking %></td>
+      <td><%= s.Price_p_n %></td>
+      <td><%= s.created_at %></td>
+  </tr>
+  <% end %>
+</table>
+<form method=get action=/allproperty>
+	<h6></h6>
+	<input type=submit value="List all">
+	<h6></h6>
+</form>
+</div>
+
+<div id="box2">
+	You are logged in as: <%= current_user.email %> 
+<form method=post action=/logout>
+	<h6></h6>
+	<input type=submit value="Log Out">
+	<h6></h6>
+</form>
+ <h3> List a Property! </h3>
+ <form method=post action=/listing>
+	      <h4>Location</h4><input type=text placeholder="Location" name="property[Location]"><br>
+          <h4>Rooms</h4><input type=text placeholder="Rooms" name="property[Rooms]"></br>
+          <h4>Bathrooms</h4><input type=text placeholder="Bathrooms" name="property[Bathrooms]"><br>
+          <h4>Parking</h4><input type=text placeholder="Parking" name="property[Parking]"></br>
+          <h4>Price</h4><input type=text placeholder="Price" name="property[Price_p_n]"></br>
+          <h4>Description</h4><input type=text placeholder="Description" name="property[Description]"></br>
+         <h6></h6>
+          <input type=submit value="List!">
+
+        </form>   
+        <h6></h6> 
+         <button id='b1' onclick="myFunction()">Terms & Conditions</button>
+
+      <script>
+      function myFunction() {
+          alert("I didn't learn Bcrypt, I will not hold responsibility for loss of information. Especially Passwords.");
+      }
+      </script>    
+         
+</div>
