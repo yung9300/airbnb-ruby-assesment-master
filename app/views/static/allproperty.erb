@@ -18,6 +18,7 @@
 	<tr>
     <td><h5>Location</h5></td>
     <td><h5>Description</h5></td>
+    <td><h5>Comments</h5></td>
 </tr>
 	<tr>
 	<td>
@@ -36,12 +37,26 @@
   </td>
   <td>
   	<h4><%= s.Description %></h4>
+    <h1> </h1>
+    <form method=post action=/comment>
+        <h4>Would you like to leave a comment?</h4><input type=text placeholder="Comment" name="comment[Comment]"><br>
+        
+         <h6></h6>
+          <input type=submit value="Comment"> 
+  </td>
+  
+  <td>
+    <%@comments.each do |t| %>
+  <h4><%= t.Comment %></h4>
+  <h4><%= t.user_id %></h4>
+    <% end %>
   </td>
   </tr>
 </table>
 		
 
-	<% end %>
+
+  <% end %>
 	</div>
 
 </body>

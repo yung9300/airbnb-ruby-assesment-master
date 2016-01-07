@@ -1,5 +1,5 @@
-class Property < ActiveRecord::Base
+class Comment < ActiveRecord::Base
 	# This is Sinatra! Remember to create a migration!
 	belongs_to :user
-	has_many :comments
+	belongs_to :property
 end

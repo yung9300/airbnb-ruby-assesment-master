@@ -17,6 +17,7 @@ get '/signupsuccess' do
 end
 
 get '/allproperty' do
+  @comments = Comment.all
   @properties = Property.all
   erb :"static/allproperty"
 end
@@ -44,7 +45,7 @@ end
 
 post '/listing' do
 	# byebug
-	@property = Property.new(params[:property])
+	@property = Property.new(params[:property], user_id: session[:user_id])
 	if @property.save!
 		redirect '/listsuccess'
 	else
@@ -52,11 +53,20 @@ post '/listing' do
 	end
 end
 
+post '/comment' do
+  @comment = Comment.new(params[:comment], user_id: session[:user_id])
+  if @comment.save!
+    redirect '/allproperty'
+  else
+    return ''
+  end
+end
+
 post '/login' do
  
   if @user = User.find_by(email: params[:user][:email])
   @user.password == params[:password_hash]
-    session[:user] = @user.id
+    session[:user_id] = @user.id
     redirect '/home'
   else
     redirect '/loginfail'
@@ -64,7 +74,7 @@ post '/login' do
 end 
 
 post '/logout' do
-  session[:user] = nil 
+  session[:user_id] = nil 
 redirect '/'
 end
 
